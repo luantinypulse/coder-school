@@ -19,14 +19,14 @@ The following is a list of **required** features of the application you'll build
 
 > HINT: Mark the items you completed with [x] as you go
 
-* [ ] Users can create, edit, and delete Articles from the database using their Rails application.
-* [ ] User can create a new Article, formatted using the Markdown language.
-* [ ] User can see how long ago the Article was created.
+* [x] Users can create, edit, and delete Articles from the database using their Rails application.
+* [x] User can create a new Article, formatted using the Markdown language.
+* [x] User can see how long ago the Article was created.
 * [ ] There is one Article that introduces the App Creator with name & picture.
-* [ ] User see a search form on the Articles page.
+* [x] User see a search form on the Articles page.
 * [ ] When the User attempts to delete an Article there is an alert modal which asks the User to confirm deletion of that specific Article.
-* [ ] User can submit a search term to find Articles with titles or body containing search terms.
-* [ ] User can create, edit, and delete comments on an Article.
+* [x] User can submit a search term to find Articles with titles or body containing search terms.
+* [x] User can create, edit, and delete comments on an Article.
 * [ ] User can navigate the application with a responsive navbar.
       http://v4-alpha.getbootstrap.com/examples/navbar/.
 * [ ] User can Sign Up, Log In, & Sign Out of our application using the Devise gem.      
