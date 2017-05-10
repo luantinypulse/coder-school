@@ -1,6 +1,11 @@
+ <br>
+ <br>
+ <br>
+
+<h3> Adding New Comment </h3>
 <%= form_for [@article, Comment.new] do |f| %>
     <div class="form_line">
       <%= f.text_field :content, placeholder: "Comment", class: "form-controller", required: true %>
-      <%= f.submit "Comment", class: "btn btn-primary"  %>
+      <%= f.submit "Submit Comment", class: "btn btn-primary"  %>
     </div>
 <% end %>
