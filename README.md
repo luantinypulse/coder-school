@@ -27,7 +27,7 @@ The following is a list of **required** features of the application you'll build
 * [ ] When the User attempts to delete an Article there is an alert modal which asks the User to confirm deletion of that specific Article.
 * [x] User can submit a search term to find Articles with titles or body containing search terms.
 * [x] User can create, edit, and delete comments on an Article.
-* [ ] User can navigate the application with a responsive navbar.
+* [x] User can navigate the application with a responsive navbar.
       http://v4-alpha.getbootstrap.com/examples/navbar/.
 * [ ] User can Sign Up, Log In, & Sign Out of our application using the Devise gem.      
 * [ ] The navbar will be responsive as well as **smart**, showing the user logical options related to authentication.
