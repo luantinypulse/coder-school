@@ -1,4 +1,3 @@
-<p id="notice"><%= notice %></p>
 
 <p>
   <strong>Title:</strong>
@@ -6,18 +5,27 @@
   <br>
   <strong>Created At:</strong>
   <%= @article.created_at %>
+  <br>
+  <strong>Created By User:</strong>
+  <%= @article.user_id %>
 </p>
 
 <p>
   <strong>Body:</strong><br>
   <%= @article.body %>
+  <br>
+  <% if @article.user_id == current_user.id %>
+    <%= link_to 'Edit', edit_article_path(@article) %> |
+    <%= link_to 'Delete', @article , method: :delete, data: { confirm: "Are you sure to detlete the article - #{@article.title}" } %> |
+    <%= link_to 'Back', articles_path %>
+
+  <% end %>
+
 </p>
 
-<h3> Edit Article ... </h3></h1>
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
 
-<h3>Comments : ... </h3>
+<strong>Comments : ... </strong>
 <%= render @article.comments %>
 <%= render 'comments/form' %>
+
 

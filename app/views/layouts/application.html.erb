@@ -10,9 +10,6 @@
 
   <body>
 
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-
   <!-- Navigation Bar -->
     <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -21,16 +18,29 @@
       <a class="navbar-brand" href="<%= root_path %>">Blog</a>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#">SIGN UP <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">LOG IN</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">LOG OUT</a>
-          </li>
+        <!-- Log In/Out Logig -->
+        <% if user_signed_in? %>
+            <li class="nav-item">
+              <a class="nav-link" data-method="delete" href="<%= destroy_user_session_path %>">LOG OUT</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="<%= new_article_path %>">CREATE NEW ARTICLE</a>
+            </li>
+
+
+        <% else %>
+
+            <li class="nav-item">
+              <a class="nav-link" href="<%= new_user_registration_path %>">SIGN UP <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="<%= new_user_session_path %>">LOG IN</a>
+            </li>
+        <% end %>
+
         </ul>
         <form class="form-inline my-2 my-lg-0">
           <%= form_tag(articles_path, :method => "get" , id: "search-form") do%>
@@ -41,6 +51,14 @@
       </div>
     </nav>
 
+  <!-- Flash Notice -->
+  <% unless flash.empty? %>
+      <div class="container">
+        <% flash.each do |key, value| %>
+            <%= value %>
+        <% end %>
+  <% end %>
+  </div>
     <!-- Yield Controller -->
     <div class="container">
     <%= yield %>

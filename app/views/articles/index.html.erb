@@ -1,7 +1,4 @@
-<p id="notice"><%= notice %></p>
-
-
-
+<div class="containing">
 
 <h1>Articles</h1>
 
@@ -21,9 +18,15 @@
         <td><%= article.title %></td>
         <td><%= time_ago_in_words(article.created_at) %></td>
         <td><%= @markdown.render(article.body).html_safe %></td>
-        <td><%= link_to 'View', article %></td>
-        <td><%= link_to 'Edit', edit_article_path(article) %></td>
-        <td><%= link_to 'Delete', article, method: :delete, data: { confirm: "Are you sure to detlete the article - #{article.title}" } %></td>
+
+        <% if user_signed_in? %>
+              <td><%= link_to 'View', article %></td>
+          <% if article.user_id == current_user.id %>
+              <td><%= link_to 'Edit', edit_article_path(article) %></td>
+              <td><%= link_to 'Delete', article, method: :delete, data: { confirm: "Are you sure to detlete the article - #{article.title}" } %></td>
+          <% end %>
+        <% end %>
+
       </tr>
     <% end %>
   </tbody>
@@ -31,4 +34,4 @@
 
 <br>
 
-<%= link_to 'New Article', new_article_path %>
+</div>
