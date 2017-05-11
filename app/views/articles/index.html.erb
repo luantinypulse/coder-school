@@ -5,9 +5,9 @@
 <table>
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Created At</th>
-      <th>Body</th>
+      <th style="text-align:center;">Title</th>
+      <th style="text-align:center;">Created At</th>
+      <th style="text-align:center;">Body</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -19,8 +19,9 @@
         <td><%= time_ago_in_words(article.created_at) %></td>
         <td><%= @markdown.render(article.body).html_safe %></td>
 
-        <% if user_signed_in? %>
+
               <td><%= link_to 'View', article %></td>
+        <% if user_signed_in? %>
           <% if article.user_id == current_user.id %>
               <td><%= link_to 'Edit', edit_article_path(article) %></td>
               <td><%= link_to 'Delete', article, method: :delete, data: { confirm: "Are you sure to detlete the article - #{article.title}" } %></td>

@@ -1,9 +1,12 @@
  <br><br><br>
 
-<strong> Adding New Comment </strong>
-<%= form_for [@article, Comment.new] do |f| %>
-    <div class="form_line">
-      <%= f.text_field :content, placeholder: "Comment", class: "form-controller", required: true %>
-      <%= f.submit "Submit Comment", class: "btn btn-primary"  %>
-    </div>
-<% end %>
+
+<% if user_signed_in? %>
+  <strong> Adding New Comment </strong>
+  <%= form_for [@article, Comment.new] do |f| %>
+      <div class="form_line">
+        <%= f.text_field :content, placeholder: "Comment", class: "form-controller", required: true %>
+        <%= f.submit "Submit Comment", class: "btn btn-primary"  %>
+      </div>
+  <% end %>
+ <% end %>

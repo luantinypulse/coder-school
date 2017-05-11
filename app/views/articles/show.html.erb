@@ -13,14 +13,15 @@
 <p>
   <strong>Body:</strong><br>
   <%= @article.body %>
-  <br>
-  <% if @article.user_id == current_user.id %>
+  <div>
+
+
+  <% if user_signed_in? && @article.user_id == current_user.id %>
     <%= link_to 'Edit', edit_article_path(@article) %> |
     <%= link_to 'Delete', @article , method: :delete, data: { confirm: "Are you sure to detlete the article - #{@article.title}" } %> |
     <%= link_to 'Back', articles_path %>
-
   <% end %>
-
+  </div>
 </p>
 
 

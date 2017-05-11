@@ -1,7 +1,10 @@
 
 
-<p><li><%= comment.content %></li></p>
-<% if comment.user_id == current_user.id %>
+<p>
+<li><%= comment.content %></li>
+<i><%= "Created By : #{comment.user_id}" %></i>
+</p>
+<% if user_signed_in? && comment.user_id == current_user.id %>
 <%= link_to 'Edit', edit_article_comment_path(comment.article, comment), class: "btn_btn-success" %> |
 <%= link_to 'Delete', article_comment_path(comment.article, comment), method: :delete, data: {confirm: "Are you sure to delete this comment : #{comment.content}?"} %>
 <% end %>
