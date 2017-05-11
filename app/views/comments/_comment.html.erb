@@ -2,7 +2,7 @@
 
 <p>
 <li><%= comment.content %></li>
-<i><%= "Created By : #{comment.user_id}" %></i>
+<i><%= "Created By :#{comment.user.email} - #{time_ago_in_words(comment.created_at)}" %></i>
 </p>
 <% if user_signed_in? && comment.user_id == current_user.id %>
 <%= link_to 'Edit', edit_article_comment_path(comment.article, comment), class: "btn_btn-success" %> |

@@ -6,6 +6,7 @@
   <thead>
     <tr>
       <th style="text-align:center;">Title</th>
+      <th style="text-align:center;">Created By</th>
       <th style="text-align:center;">Created At</th>
       <th style="text-align:center;">Body</th>
       <th colspan="3"></th>
@@ -16,6 +17,7 @@
     <% @articles.each do |article| %>
       <tr>
         <td><%= article.title %></td>
+        <td><%= article.user.email %></td>
         <td><%= time_ago_in_words(article.created_at) %></td>
         <td><%= @markdown.render(article.body).html_safe %></td>
 

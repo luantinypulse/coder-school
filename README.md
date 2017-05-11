@@ -22,9 +22,9 @@ The following is a list of **required** features of the application you'll build
 * [x] Users can create, edit, and delete Articles from the database using their Rails application.
 * [x] User can create a new Article, formatted using the Markdown language.
 * [x] User can see how long ago the Article was created.
-* [ ] There is one Article that introduces the App Creator with name & picture.
+* [x] There is one Article that introduces the App Creator with name & picture.
 * [x] User see a search form on the Articles page.
-* [ ] When the User attempts to delete an Article there is an alert modal which asks the User to confirm deletion of that specific Article.
+* [x] When the User attempts to delete an Article there is an alert modal which asks the User to confirm deletion of that specific Article.
 * [x] User can submit a search term to find Articles with titles or body containing search terms.
 * [x] User can create, edit, and delete comments on an Article.
 * [x] User can navigate the application with a responsive navbar.
@@ -38,9 +38,9 @@ The following is a list of **required** features of the application you'll build
 
 The following **optional** features are implemented:
 
-* [ ] User can see who created the Article.
+* [x] User can see who created the Article.
 * [ ] User can see how many views an Article has.
-* [ ] User can see who created the Comment. 
+* [x] User can see who created the Comment. 
 * [ ] User can add "tags" to a Article, and filter Articles by tag.
 
 > HINT: if you are unsure how to implement the Search feature, you can Google how to implement a simple search form. For example, one of the sites you will find is [this](http://www.jorgecoca.com/buils-search-form-ruby-rails/)
