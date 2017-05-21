@@ -1,23 +1,16 @@
 # Pre-work - *blog*
 
-> HINT: Please
-> - include this README.md in your project and fill out the information. 
-> - remove the `README.rdoc` file that Rails generates. 
-> - remove all the HINT blocks in this file.
-
 **blog** is a Ruby on Rails blog application.
 
 Submitted by: **Luan Ta**
 
-Time spent: **X** hours spent in total
+Time spent: **32** hours spent in total
 
 URL: **Insert your Heroku URL here**
 
 ## User Stories
 
 The following is a list of **required** features of the application you'll build for our Pre-work.
-
-> HINT: Mark the items you completed with [x] as you go
 
 * [x] Users can create, edit, and delete Articles from the database using their Rails application.
 * [x] User can create a new Article, formatted using the Markdown language.
@@ -43,8 +36,6 @@ The following **optional** features are implemented:
 * [x] User can see who created the Comment. 
 * [ ] User can add "tags" to a Article, and filter Articles by tag.
 
-> HINT: if you are unsure how to implement the Search feature, you can Google how to implement a simple search form. For example, one of the sites you will find is [this](http://www.jorgecoca.com/buils-search-form-ruby-rails/)
-
 The following **additional** features are implemented:
 
 - [ ] List anything else that you can get done to improve the app functionality!
@@ -53,17 +44,15 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-> HINT: You can put a `walkthrough.gif` file in your project folder, add to git, and use the following syntax to embed it:  
-> `![Video Walkthrough](walkthrough.gif)` 
-> 
-
-![Video Walkthrough](/path/to/your/gif/file)
-
-GIF created with [LiceCap](http://www.cockos.com/licecap/).
+![Video Walkthrough](/Users/luanta/source/coder-school/blog/Walkthrough/walkthrough.gif)
 
 ## Notes
 
 Describe any challenges encountered while building the app.
+
+Since, I was not a developer, so syntax coding and developing term is not realy familiar with me.
+However, I have no problem with understanding the logic behind.
+
 
 ## License
 
