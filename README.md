@@ -44,7 +44,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-![Video Walkthrough](/Users/luanta/source/coder-school/blog/Walkthrough/walkthrough.gif)
+![Video Walkthrough](Walkthrough/walkthrough.gif)
 
 ## Notes
 
