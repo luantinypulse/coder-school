@@ -6,7 +6,8 @@ Submitted by: **Luan Ta**
 
 Time spent: **32** hours spent in total
 
-URL: **Insert your Heroku URL here**
+URL: 
+https://luan-coder-school.herokuapp.com/
 
 ## User Stories
 
